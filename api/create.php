@@ -9,7 +9,9 @@
     $database = new Database();
     $db = $database->getConnection();
     $item = new Employee($db);
-    $data = json_decode(file_get_contents("php://input"));
+    $data = json_decode(file_get_contents("data.txt"));
+    var_dump($data);
+    die();
     $item->name = $data->name;
     $item->email = $data->email;
     $item->age = $data->age;
